@@ -130,7 +130,7 @@ export default function Home() {
               </p>
             </div>
             <div className="pt-6 flex flex-wrap gap-5">
-              <a href="#score" className="inline-flex items-center gap-3 px-10 py-5 bg-[#1A362D] text-white rounded-full font-semibold hover:bg-[#2C5244] transition-all hover:scale-105 shadow-xl shadow-[#1A362D]/20">
+              <a href="#score" className="inline-flex items-center gap-3 px-10 py-5 bg-[#1A362D] text-white rounded-full font-semibold hover:bg-[#2C5244] transition-all hover:scale-105 cursor-pointer shadow-xl shadow-[#1A362D]/20">
                 Explore Strategy <ArrowRight className="w-6 h-6" />
               </a>
             </div>
@@ -200,7 +200,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: false }}
                   transition={{ delay: i * 0.1 }}
-                  className="relative p-5 rounded-3xl bg-white/5 border border-white/10 overflow-hidden group hover:bg-white/10 transition-all duration-500"
+                  className="relative p-5 rounded-3xl bg-white/5 border border-white/10 overflow-hidden group hover:bg-white/10 transition-all duration-300 hover:scale-[1.02] hover:shadow-md cursor-pointer"
                 >
                   <div className={`absolute top-0 left-0 w-1 h-full bg-gradient-to-b ${stat.color} opacity-50`} />
                   <div className="flex justify-between items-start mb-3">
@@ -249,7 +249,7 @@ export default function Home() {
                   points: ['Content overload', 'Poor information prioritization', 'Non-strategic section ordering']
                 }
               ].map((item, i) => (
-                <div key={i} className="space-y-3 p-6 rounded-3xl bg-white shadow-sm border border-[#1A362D]/5">
+                <div key={i} className="space-y-3 p-6 rounded-3xl bg-white shadow-sm border border-[#1A362D]/5 hover:scale-[1.02] hover:shadow-md transition-all duration-300 cursor-pointer">
                   <div className="flex gap-4 items-center">
                     <CheckCircle2 className="w-6 h-6 text-[#E67E22] shrink-0" />
                     <h4 className="font-bold text-[#1A362D] text-xl">{item.title}</h4>
@@ -287,7 +287,7 @@ export default function Home() {
                   initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: false }}
-                  className="p-6 rounded-3xl bg-white shadow-md border border-white flex gap-4 items-center"
+                  className="p-6 rounded-3xl bg-white shadow-md border border-white flex gap-4 items-center hover:scale-[1.02] hover:shadow-lg transition-all duration-300 cursor-pointer"
                 >
                   <div className="w-12 h-12 rounded-xl bg-[#1A362D]/5 flex items-center justify-center shrink-0">
                     <AlertTriangle className="w-6 h-6 text-[#E67E22]" />
@@ -348,7 +348,7 @@ export default function Home() {
                   points: ['High drop-off rates for first-time visitors', 'Restricted browse/compare options']
                 }
               ].map((item, i) => (
-                <div key={i} className="space-y-3 p-6 rounded-3xl bg-white shadow-sm border border-[#1A362D]/5">
+                <div key={i} className="space-y-3 p-6 rounded-3xl bg-white shadow-sm border border-[#1A362D]/5 hover:scale-[1.02] hover:shadow-md transition-all duration-300 cursor-pointer">
                   <div className="flex gap-4 items-center">
                     <CheckCircle2 className="w-6 h-6 text-[#2ECC71] shrink-0" />
                     <h4 className="font-bold text-[#1A362D] text-xl">{item.title}</h4>
@@ -407,7 +407,8 @@ export default function Home() {
                     initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: false }}
-                    className="p-6 rounded-3xl bg-white/5 border border-white/10 space-y-4"
+                    whileHover={{ scale: 1.02 }}
+                    className="p-6 rounded-3xl bg-white/5 border border-white/10 space-y-4 cursor-pointer hover:bg-white/10 transition-all duration-300"
                   >
                     <div className="flex gap-4 items-center">
                       <div className="w-10 h-10 rounded-xl bg-[#E67E22]/20 flex items-center justify-center shrink-0">
@@ -472,7 +473,7 @@ export default function Home() {
                   points: ['Weak keyword integration', 'Limited indexable content', 'No visible content strategy']
                 }
               ].map((item, i) => (
-                <div key={i} className="space-y-3 p-6 rounded-3xl bg-white shadow-sm border border-[#1A362D]/5">
+                <div key={i} className="space-y-3 p-6 rounded-3xl bg-white shadow-sm border border-[#1A362D]/5 hover:scale-[1.02] hover:shadow-md transition-all duration-300 cursor-pointer">
                   <div className="flex gap-4 items-center">
                     <div className="w-10 h-10 rounded-xl bg-[#3498DB]/10 flex items-center justify-center shrink-0">
                       <TrendingUp className="w-5 h-5 text-[#3498DB]" />
@@ -534,7 +535,8 @@ export default function Home() {
                     initial={{ opacity: 0, y: 20 }} 
                     whileInView={{ opacity: 1, y: 0 }} 
                     viewport={{ once: false }} 
-                    className="p-6 rounded-3xl bg-white shadow-md border border-white space-y-3"
+                    whileHover={{ scale: 1.02 }}
+                    className="p-6 rounded-3xl bg-white shadow-md border border-white space-y-3 cursor-pointer hover:shadow-lg transition-all duration-300"
                   >
                     <h3 className="text-lg font-bold flex items-center gap-3 text-[#1A362D]">
                       <AlertTriangle className="w-5 h-5 text-[#E67E22]" /> {item.title}
@@ -561,7 +563,7 @@ export default function Home() {
               >
                 <TechIllustration />
               </motion.div>
-              <div className="p-8 rounded-[32px] bg-white shadow-xl shadow-[#1A362D]/5 border border-white">
+              <div className="p-8 rounded-[32px] bg-white shadow-xl shadow-[#1A362D]/5 border border-white hover:scale-[1.02] hover:shadow-2xl transition-all duration-300 cursor-pointer">
                 <h3 className="text-xl font-bold flex items-center gap-3 mb-4 text-[#2ECC71]"><CheckCircle2 className="w-6 h-6" /> Core Strengths</h3>
                 <p className="text-sm opacity-70">The platform performs relatively well in terms of loading speed, with pages loading quickly and without noticeable delays. Core features like the cart and basic navigation are functional.</p>
               </div>
@@ -619,8 +621,9 @@ export default function Home() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: false }}
+                    whileHover={{ scale: 1.02 }}
                     transition={{ delay: i * 0.1 }}
-                    className="p-6 rounded-3xl bg-white shadow-lg shadow-[#1A362D]/5 border border-[#1A362D]/10 hover:border-[#E67E22]/50 transition-all duration-500 space-y-3"
+                    className="p-6 rounded-3xl bg-white shadow-lg shadow-[#1A362D]/5 border border-[#1A362D]/10 hover:border-[#E67E22]/50 transition-all duration-500 space-y-3 cursor-pointer"
                   >
                     <h4 className="font-bold text-[#1A362D] text-lg">{item.title}</h4>
                     <p className="text-xs text-[#1A362D]/70 leading-relaxed">{item.desc}</p>
@@ -674,11 +677,11 @@ export default function Home() {
               ].map((item, i) => (
                 <motion.div 
                   key={i}
-                  whileHover={{ x: 10 }} 
+                  whileHover={{ x: 10, scale: 1.02 }} 
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: false }}
-                  className="p-8 rounded-[32px] bg-white/5 border border-white/10 group hover:bg-white/10 transition-all space-y-3"
+                  className="p-8 rounded-[32px] bg-white/5 border border-white/10 group hover:bg-white/10 transition-all space-y-3 cursor-pointer"
                 >
                   <h4 className="text-white font-bold text-xl">{item.title}</h4>
                   <p className="text-base text-white/60 leading-relaxed">{item.desc}</p>
@@ -740,7 +743,7 @@ export default function Home() {
                 <motion.div 
                   key={i} 
                   whileHover={{ scale: 1.02 }}
-                  className="p-8 rounded-[32px] bg-white shadow-xl shadow-[#1A362D]/5 border border-[#1A362D]/5 space-y-3"
+                  className="p-8 rounded-[32px] bg-white shadow-xl shadow-[#1A362D]/5 border border-[#1A362D]/5 space-y-3 cursor-pointer"
                 >
                   <h4 className="font-bold text-[#1A362D] text-xl flex items-center gap-3">
                     <Sparkles className="w-5 h-5 text-[#9B59B6]" />
@@ -804,8 +807,9 @@ export default function Home() {
                   initial={{ opacity: 0, x: 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: false }}
+                  whileHover={{ scale: 1.02 }}
                   transition={{ delay: i * 0.1 }}
-                  className="p-8 rounded-[32px] bg-white/5 border border-white/10 flex gap-8 items-center group hover:bg-white/10 transition-all"
+                  className="p-8 rounded-[32px] bg-white/5 border border-white/10 flex gap-8 items-center group hover:bg-white/10 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl cursor-pointer"
                 >
                   <div className={`w-14 h-14 rounded-full ${item.color} flex items-center justify-center text-white font-bold text-2xl shrink-0 shadow-lg`}>
                     {item.phase}
@@ -851,7 +855,7 @@ export default function Home() {
           <div className="pt-10 flex flex-col sm:flex-row gap-6 justify-center">
             <a 
               href="#intro"
-              className="px-12 py-6 bg-[#E67E22] text-white rounded-full font-bold text-xl hover:bg-[#D35400] transition-all hover:scale-105 shadow-2xl shadow-[#E67E22]/20 flex items-center justify-center"
+              className="px-12 py-6 bg-[#E67E22] text-white rounded-full font-bold text-xl hover:bg-[#D35400] transition-all hover:scale-105 cursor-pointer shadow-2xl shadow-[#E67E22]/20 flex items-center justify-center"
             >
               Start Over
             </a>

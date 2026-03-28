@@ -33,7 +33,7 @@ export function NavigationDots({ sections }: { sections: string[] }) {
           key={id}
           href={`#${id}`}
           className={cn(
-            "w-2.5 h-2.5 rounded-full transition-all duration-300 border border-transparent",
+            "w-2.5 h-2.5 rounded-full transition-all duration-300 border border-transparent cursor-pointer",
             active === id 
               ? "bg-[#E67E22] scale-150 border-white/20 shadow-sm" 
               : "bg-gray-400/40 hover:bg-gray-400/80"

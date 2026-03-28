@@ -15,6 +15,9 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: 'Rayeva Pvt LMT - Website Analysis',
   description: 'Comprehensive analysis and strategic roadmap for Rayeva platform.',
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
